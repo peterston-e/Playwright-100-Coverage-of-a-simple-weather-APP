@@ -77,8 +77,6 @@ test.describe("API Responses", () => {
 			console.error("Error testing Geolocation API response:", error);
 		}
 
-		await page.waitForTimeout(5000);
-
 		await context.close();
 	});
 });
