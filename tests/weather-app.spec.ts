@@ -1,5 +1,8 @@
 import { test, expect, chromium } from "@playwright/test";
 
+const URL =
+	"https://playwright-100-percent-coverage-of-a-simple-weather-app.vercel.app/";
+
 test("Weather API response OK", async () => {
 	const browser = await chromium.launch();
 	const context = await browser.newContext({
@@ -18,11 +21,10 @@ test("Weather API response OK", async () => {
 		// Continue the route
 		const response = await route.fetch();
 		apiResponseStatus = response.status();
-		console.log(response.status());
 		await route.continue();
 	});
 
-	await page.goto("http://localhost:3000");
+	await page.goto(URL);
 
 	try {
 		await page.waitForResponse("https://api.open-meteo.com/**", {
