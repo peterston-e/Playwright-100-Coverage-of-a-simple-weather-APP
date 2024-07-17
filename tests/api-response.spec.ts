@@ -51,6 +51,7 @@ test.describe("API Responses", () => {
 		});
 
 		// Mock geolocation
+		// this effectively replaces the geo function to return a mock location
 		await page.evaluate(() => {
 			navigator.geolocation.getCurrentPosition = (success) => {
 				success({
