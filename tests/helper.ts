@@ -1,4 +1,4 @@
-import { test, expect, chromium, Page } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 
 export async function testAPIResponse(
 	page: Page,
@@ -9,17 +9,19 @@ export async function testAPIResponse(
 	let apiResponseStatus = null;
 
 	await page.route(apiURL, async (route) => {
+		// console.log(`Intercepted request to: ${route.request().url()}`);
 		// Intercept the route
 		apiCalled = true;
 
 		// Continue the route
 		const response = await route.fetch();
 		apiResponseStatus = response.status();
+		// console.log(`Response status: ${apiResponseStatus}`);
 		await route.continue();
 	});
 
 	try {
-		await page.waitForResponse("https://api.open-meteo.com/**", {
+		await page.waitForResponse(apiURL, {
 			timeout: timeout,
 		});
 	} catch (error) {
