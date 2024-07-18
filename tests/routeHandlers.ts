@@ -20,7 +20,7 @@ export const mockWeatherApiRoute = (route: Route) => {
 				},
 				current: {
 					time: "2013-01-11T08:30",
-					temperature_2m: 180.6,
+					temperature_2m: 20.6,
 					relative_humidity_2m: 50,
 					apparent_temperature: 21.2,
 					precipitation: 0.0,

@@ -33,6 +33,7 @@ test.describe("API Responses", () => {
 		});
 		page = await context.newPage();
 		await page.goto(URL);
+		// await page.waitForTimeout(1000);
 		await testAPIResponse(page, API_URL, 30000);
 		await context.close();
 	});
