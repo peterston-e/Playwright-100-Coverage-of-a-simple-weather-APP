@@ -8,6 +8,7 @@ import {
 } from "./utils";
 
 interface WeatherData {
+	current_units: any;
 	current: {
 		time: string;
 		temperature_2m: number;
@@ -81,7 +82,8 @@ const Weather: React.FC = () => {
 					{weatherCodes[weatherData.current.weather_code]}
 				</p>
 				<p data-testid="temperature" className="degreesC text-7xl mb-10">
-					{weatherData.current.temperature_2m} ℃
+					{weatherData.current.temperature_2m}{" "}
+					{weatherData.current_units.apparent_temperature}
 				</p>
 
 				<p data-testid="precipitation" className="precipitation-percent">
