@@ -18,6 +18,6 @@ test("Weather app with mocked API data", async () => {
 	await expect(page.locator(':text("Loading...")')).not.toBeVisible();
 
 	// Close the browser at the end of the test
-	// await browser.close();
-	await page.pause();
+	await browser.close();
+	// await page.pause();
 });
