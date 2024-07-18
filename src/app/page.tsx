@@ -68,23 +68,29 @@ const Weather: React.FC = () => {
 	return (
 		<div className="min-h-screen w-full flex items-center justify-center">
 			<div className="flex flex-col gap-1 p-4 max-w-md w-full">
-				<h1 className="text-4xl pt-3 pb-3">The Weather App</h1>
-				<h2 className="title text-2xl">{location}</h2>
-				<p className="time">{formatDate(weatherData.current.time)}</p>
-				<p className="weather-code mb-10">
+				<h1 data-testid="main-heading" className="text-4xl pt-3 pb-3">
+					The Weather App
+				</h1>
+				<h2 data-testid="location" className="title text-2xl">
+					{location}
+				</h2>
+				<p data-testid="weather-time" className="time">
+					{formatDate(weatherData.current.time)}
+				</p>
+				<p data-testid="weather-code" className="weather-code mb-10">
 					{weatherCodes[weatherData.current.weather_code]}
 				</p>
-				<p className="degreesC text-7xl mb-10">
+				<p data-testid="temperature" className="degreesC text-7xl mb-10">
 					{weatherData.current.temperature_2m} ℃
 				</p>
 
-				<p className="precipitation-percent">
+				<p data-testid="precipitation" className="precipitation-percent">
 					Precipitation: {weatherData.current.precipitation} mm
 				</p>
-				<p className="humidity-percent">
+				<p data-testid="humidity" className="humidity-percent">
 					Humidity: {weatherData.current.relative_humidity_2m} %
 				</p>
-				<p className="wind-speed">
+				<p data-testid="wind-speed" className="wind-speed">
 					Wind Speed: {weatherData.current.wind_speed_10m} km/h
 				</p>
 			</div>
