@@ -30,7 +30,7 @@ test("Weather app with real API data", async ({ page }) => {
 	);
 
 	const temperature = await page.getByTestId("temperature").textContent();
-	expect(temperature).toMatch(/-?\d+(\.\d+)?\s*℃/);
+	expect(temperature).toMatch(/-?\d+(\.\d+)?\s*°C/);
 
 	const precipitation = await page.getByTestId("precipitation").textContent();
 	expect(precipitation).toMatch(/^Precipitation:\s+\d+(\.\d)?\s+mm/);
