@@ -40,4 +40,7 @@ test("Weather app with real API data", async ({ page }) => {
 
 	const windSpeed = await page.getByTestId("wind-speed").textContent();
 	expect(windSpeed).toMatch(/^Wind\sSpeed:\s\d+\.?\d+?\skm\/h/);
+
+	const designedToFail = await page.getByTestId("wind-speed").textContent();
+	expect(designedToFail).toMatch(/^Fail/);
 });
