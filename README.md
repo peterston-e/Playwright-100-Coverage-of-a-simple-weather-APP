@@ -3,6 +3,9 @@
 E2E testing with Playwright: 100% coverage of a simple weather app. Intercepts HTTP requests, mocks data, UI verification and automated GitHub Actions integration.
 This project was designed to help me learn som of the more complex aspect of Playwright that goes beyond simply assertions and makes use of the powerful data mocking and route capabilities.
 
+App will request you location. No data is collected or used.
+Deployed with Vercel [The Weather App](https://playwright-100-percent-coverage-of-a-simple-weather-app.vercel.app/)
+
 ### Playwright tests
 
 1. Intercepts the HTTP requests with the `.route()` method to modify and mock the data.
@@ -65,8 +68,10 @@ npx playwright test
 
 ## Contributing
 
-If you would like to contribute to the UI in any way please make a pull request and I will consider the changes.
+If you would like to contribute to the Project in any way please make a pull request and I will consider the changes.
 The app is using Tailwind CSS and you can get started modifying the `src/app/page.tsx` classes.
+
+If you spot any flakey tests, raise an issue and suggest changes or fix the problem and make a pull request explaining your reasons and code.
 
 To learn more about Playwright, Tailwind, Next.js and React, take a look at the following resources:
 
