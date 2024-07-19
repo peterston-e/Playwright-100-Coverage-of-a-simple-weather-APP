@@ -8,12 +8,17 @@ This project was designed to help me learn som of the more complex aspect of Pla
 1. Intercepts the HTTP requests with the `.route()` method to modify and mock the data.
 2. Verifies the response from the actual API requests is OK.
 3. Data Mocking: Replaces the response data with hard coded json object.
-4. Mimics the asynchronous call to the browsers geolocation method
-5. UI Verification: Assert that elements are correctly displayed on a deployed site
+4. Mimics the asynchronous call to the browsers geolocation method.
+5. UI Verification: Assert that elements are correctly displayed on a deployed site.
+
+## Github Actions integration
+
+1. YML file added to run tests on push to main.
+2. Further steps can be taken on your github account to create rules to only allow merging if all tests pass.
 
 ### Weather app
 
-1. Requests permission to use the Geolocation API `navigator.geolocation.getCurrentPosition()`
+1. Requests permission to use the Geolocation API. `navigator.geolocation.getCurrentPosition()`
 2. Makes a API request for location name to a reverse geo API using the current position.
 3. Makes a second API request to Meteo weather for current condition also using the geolocation data.
 4. Displays the data collected to show current weather in your locality.
