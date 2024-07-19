@@ -39,5 +39,5 @@ test("Weather app with real API data", async ({ page }) => {
 	expect(humidity).toMatch(/^Humidity:\s\d{1,3}\s%/);
 
 	const windSpeed = await page.getByTestId("wind-speed").textContent();
-	expect(windSpeed).toMatch(/^Wind\sSpeed:\s\d+\.?\d+?\skm\/h/);
+	expect(windSpeed).toMatch(/^Wind\sSpeed:\s\d+(\.\d+)?\skm\/h/);
 });
