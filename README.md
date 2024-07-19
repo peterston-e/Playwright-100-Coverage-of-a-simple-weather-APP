@@ -1,4 +1,4 @@
-# <p style="text-align: center;">Playwright 100% Coverage of a simple weather app</p>
+# <div align="center" ><p style="text-align: center;">Playwright 100% Coverage of a simple weather app</p></div>
 
 E2E testing with Playwright: 100% coverage of a simple weather app. Intercepts HTTP requests, mocks data, UI verification and automated GitHub Actions integration.
 This project was designed to help me learn som of the more complex aspect of Playwright that goes beyond simply assertions and makes use of the powerful data mocking and route capabilities.
@@ -38,8 +38,9 @@ Deployed with Vercel [The Weather App](https://playwright-100-percent-coverage-o
 	<code style="margin:0 20px;"><img width="50" src="https://github.com/marwin1991/profile-technology-icons/assets/136815194/5f8c622c-c217-4649-b0a9-7e0ee24bd704" alt="Next.js" title="Next.js"/></code>
 </div>
 
+<div align="center" >
 <p style="text-align: center;"><span style="margin:50px 0px">  Playwright,</span> <span style="margin:50px 0px">  TypeScript,</span> <span style="margin:50px 0px">  React,</span> <span style="margin:50px 0px">  Tailwind CSS,</span><span style="margin:50px 0px">  Next.js</span></p>
-<span style="margin:50px 0px"></span>
+</div>
 
 ## Getting Started
 
